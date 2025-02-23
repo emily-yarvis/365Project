@@ -1,6 +1,6 @@
-###Welcome to our project###
+## Welcome to our project ##
 
-##Emilys Notes 
+### Emilys Notes 
 
 My compile and run statements: 
 
