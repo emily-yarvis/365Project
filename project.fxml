@@ -32,7 +32,6 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import com.gluonhq.charm.glisten.control.CardPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
@@ -109,7 +108,7 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                            <children>
                               <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-                              <Button layoutX="2.0" layoutY="9.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Rooms" />
+                              <Button fx:id="roomsButton" layoutX="2.0" layoutY="9.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Rooms" />
                               <Button layoutX="2.0" layoutY="62.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Guests" />
                               <Button layoutX="2.0" layoutY="120.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Staff" />
                            </children>
@@ -123,13 +122,6 @@
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="398.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                        <CardPane prefHeight="544.0" prefWidth="442.0">
-                            <Label style="-fx-padding:10;" text="Item in Table" />
-                            <Label style="-fx-padding:10;" text="Item in Table" />
-                            <Label style="-fx-padding:10;" text="Item in Table" />
-                           <Label style="-fx-padding:10;" text="Item in Table" />
-                           <Button mnemonicParsing="false" text="Add Another Item" />
-                        </CardPane>
               </children>
             </AnchorPane>
           </content>

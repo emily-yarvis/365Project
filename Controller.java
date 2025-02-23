@@ -23,11 +23,12 @@ public class Controller {
 
     @FXML
     void RoomsButtonSelected(ActionEvent event) {
-
+        roomsButton.setStyle("-fx-background-color: #ff5733;"); // Change button color to orange-red
     }
 
     @FXML
     void roomsButton(ActionEvent event) {
+        roomsButton.setStyle("-fx-background-color: #ff5733;"); // Change button color to orange-red
 
     }
 
