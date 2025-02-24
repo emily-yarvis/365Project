@@ -1,13 +1,30 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
+
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Controller {
 
     @FXML
+    private Pane RoomsPane;
+
+    @FXML
+    private Pane StaffPane;
+
+    @FXML
+    private Pane GuestsPane;
+
+    @FXML
     private Button roomsButton;
+
+    @FXML
+    private Button staffButton;
+
+    @FXML
+    private Button guestsButton;
 
     @FXML
     private Font x1;
@@ -23,17 +40,21 @@ public class Controller {
 
     @FXML
     void RoomsButtonSelected(ActionEvent event) {
-        roomsButton.setStyle("-fx-background-color: #ff5733;"); // Change button color to orange-red
+        RoomsPane.setVisible(true);
+        GuestsPane.setVisible(false);
+        StaffPane.setVisible(false);
     }
 
     @FXML
     void roomsButton(ActionEvent event) {
-        roomsButton.setStyle("-fx-background-color: #ff5733;"); // Change button color to orange-red
 
     }
 
     @FXML
     void GuestsButtonSelected(ActionEvent event) {
+        GuestsPane.setVisible(true);
+        RoomsPane.setVisible(false);
+        StaffPane.setVisible(false);
 
     }
 
@@ -44,7 +65,9 @@ public class Controller {
 
     @FXML
     void StaffButtonSelected(ActionEvent event) {
-
+        StaffPane.setVisible(true);
+        RoomsPane.setVisible(false);
+        GuestsPane.setVisible(false);
     }
 
     @FXML

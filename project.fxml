@@ -34,7 +34,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -42,7 +41,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -93,50 +91,48 @@
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane>
-          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Master" textAlignment="CENTER" wrapText="false">
-              <font>
-                <Font size="18.0" fx:id="x1" />
-              </font>
-              <textFill>
-                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
-              </textFill>
-            </Label>
-                  <ScrollPane layoutX="-1.0" prefHeight="556.0" prefWidth="200.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-                              <Button fx:id="roomsButton" layoutX="2.0" layoutY="9.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Rooms" />
-                              <Button layoutX="2.0" layoutY="62.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Guests" />
-                              <Button layoutX="2.0" layoutY="120.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="191.0" text="Staff" />
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
-          </children>
-        </AnchorPane>
-        <ScrollPane prefHeight="569.0" prefWidth="320.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="556.0" prefWidth="234.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="roomsButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#RoomsButtonSelected" prefHeight="31.0" prefWidth="165.0" text="Rooms" />
+                        <Button fx:id="guestsButton" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#GuestsButtonSelected" prefHeight="31.0" prefWidth="165.0" text="Guests" />
+                        <Button fx:id="staffButton" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onAction="#StaffButtonSelected" prefHeight="31.0" prefWidth="165.0" text="Staff" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="556.0" prefWidth="376.0">
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="398.0">
               <children>
-                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <Pane id="RoomsPane" fx:id="RoomsPane" prefHeight="545.0" prefWidth="398.0" visible="false">
+                         <Label layoutX="70" layoutY="90" text="Rooms Pane" />
+                        </Pane>
+                        <Pane id="GuestsPane" fx:id="GuestsPane" prefHeight="545.0" prefWidth="398.0" visible="false">
+                         <Label layoutX="70" layoutY="90" text="Guests Pane" />
+                        </Pane>
+                        <Pane id="StaffPane" fx:id="StaffPane" prefHeight="545.0" prefWidth="398.0" visible="false">
+                         <Label layoutX="70" layoutY="90" text="Staff Pane" />
+                        </Pane>
+                <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" wrapText="false">
+                           <font>
+                      <Font size="18.0" fx:id="x1" />
+                           </font>
+                           <textFill>
+                      <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+                           </textFill></Label>
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                <content>
-                  <TitledPane animated="false" prefHeight="557.0" prefWidth="223.0" text="Selected Table Item Details">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Button layoutX="69.0" layoutY="377.0" mnemonicParsing="false" text="Delete Item" />
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </TitledPane>
+                  <AnchorPane prefHeight="565.0" prefWidth="218.0">
+                     <children>
+                        <Button layoutX="69.0" layoutY="377.0" mnemonicParsing="false" text="Delete Item" />
+                     </children>
+                  </AnchorPane>
                </content>
             </ScrollPane>
       </items>
