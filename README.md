@@ -1,9 +1,9 @@
 ## Welcome to our project ##
 
-### Emilys Notes 
+### Compiling and Running the FE:
 
-My compile and run statements: 
+- make compile
 
-javac --module-path C:\Users\enyar\Downloads\openjfx-23.0.2_windows-x64_bin-sdk\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml Controller.java Main.java
+- make run
 
-java --module-path C:\Users\enyar\Downloads\openjfx-23.0.2_windows-x64_bin-sdk\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml Main
+*make sure to replace the current JAVAFX_LIB with the location of your javafx lib file and DO NOT push your make file to git (current make file is included as an example)
